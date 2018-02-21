@@ -1,0 +1,8 @@
+{
+  "name": "taquiclient2",
+  "app_id": "c6e8ea14",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
