@@ -1,11 +1,26 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-header >
+  <ion-item  id="input">
+      <ion-label id="icon"><ion-icon name="search"></ion-icon></ion-label>
+    <ion-input placeholder="Ex: Hotel Tivoli" > </ion-input>
+  </ion-item>
+  <ion-select [(ngModel)]="eventos" id="btn" cancelText="Cancelar" okText="OK" interface="action-sheet" >
+      <ion-option value="nes" selected>Hoteis</ion-option>
+      <ion-option value="n64"> natureza</ion-option>
+      <ion-option value="ps">manuel</ion-option>
+    </ion-select>
+
+
+    <ion-row  > 
+        <ion-col id="row"> <button ion-button outline color="taqui" style="font-size:12px;"> Em Luanda </button> </ion-col>
+        <ion-col id="row"> <button ion-button outline color="gray" style="font-size:12px;"> Perto de mim</button> </ion-col>
+        <ion-col id="row"> <button ion-button outline color="gray" style="font-size:12px;">Mais filtro </button> </ion-col>
+   </ion-row>
+  </ion-header>
 
 <ion-content padding>
+
+<div *ngFor="let manu of manuel | async">
+         <p>{{manu.city}}</p>
+</div>
 
 </ion-content>

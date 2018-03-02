@@ -1,3 +1,42 @@
 page-home {
+   
+    #icon{
+          font-size: 20px;
+    }
+    
+   #search{
+              width:84%;
+              border-radius: 100px;
+              border: 1px silver solid;   
+    }
 
+    #avatar{
+         width:50px;
+         height: 50px;
+         border-radius: 100%;
+         position: absolute;
+         top:18px;
+         right:10px;
+         box-shadow: none
+    }
+
+ .row-padding{  
+     ion-col{
+        margin:0px 10px 5px 10px; 
+        border-radius:6px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0);
+    }}
+
+     b{ font-size:17px; 
+        margin-left:10px;}
+     .row-pad{
+         .ion-col{margin:5px 10px 10px 10px; 
+         width:210px;
+         
+         /*border:1px solid gray;*/}}
+
+    .img-Artigos{
+        height: 120px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0);
+    }
 }

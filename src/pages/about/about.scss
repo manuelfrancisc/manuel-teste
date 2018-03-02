@@ -1,3 +1,29 @@
 page-about {
+    #input{
+          width: 70%;   
+         border-bottom-left-radius: 100px;
+         border-top-left-radius: 100px;
+         border: 1px solid rgb(240, 228, 228);
+         position: absolute;
+         top:22px;
+         left:10px;
+    }
+    #btn{
+        width:30%; 
+        height:49px;  
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 100px;
+        position: absolute;
+         top:22px;
+         right:10px;
+         background-color: rgb(238, 99, 123); 
 
+        
+    }
+
+     #row{
+
+          margin: 18% 0px 3px 0px;
+     }
+    
 }

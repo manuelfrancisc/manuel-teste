@@ -1,0 +1,36 @@
+page-slide {
+    .slides{
+           height:67%;
+    }
+    .btn-slide button {
+     display: block;
+     width:60%;
+     margin-left: 22%;
+     margin-top: 7px;
+     font-weight: bold;
+    }
+    .btn-slide button {
+        padding: 20px;
+        margin-top:20px;
+       }
+
+ .swiper-pagination-bullet-active{
+  background: color($colors, taqui) !important;
+  opacity: 1;
+      }
+      
+    a{
+      color:color($colors, taqui)!important;
+    }  
+
+    #p{
+        color:#d1bfbf;
+        position: absolute;
+        bottom: 0px;
+        left: 42%; 
+    }
+
+    .slide-img{
+           width:50%;
+    }
+}

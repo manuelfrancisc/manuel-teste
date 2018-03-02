@@ -34,14 +34,22 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #0b57db,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  taqui:      #e64474,
+  marron:     rgb(216, 93, 93),
+gray: rgba(136, 136, 136, 0.671)
 );
 
-
+$text-input-md-highlight-color:color($colors,taqui);
+$tabs-ios-tab-color-active: color($colors,taqui);
+$tabs-md-tab-color-active:color($colors,taqui);
+$select-md-icon-color:color($colors,light);
+$select-ios-icon-color:color($colors,light);
+$list-md-border-color:white;
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

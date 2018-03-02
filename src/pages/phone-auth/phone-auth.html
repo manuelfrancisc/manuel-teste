@@ -1,0 +1,92 @@
+<ion-content padding>
+  <div *ngIf="octavio==0">
+    <ion-grid padding>
+    <ion-row>
+    <ion-col text-center>
+        <img src="assets/imgs/Taqui.png" class="img-center">
+        <h6 >Cadastra-se,é gratis</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center >
+         <ion-item class="item"> 
+              <ion-label class="icon"><img src="assets/imgs/angola.ico"></ion-label>
+              <ion-input placeholder="insira o numero de telefone"  [(ngModel)]="PhoneNumber" ></ion-input>
+         </ion-item>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+      <button ion-button color="taqui" round id="sign-in-button" (click)="SendCode()"> SEGUINTE</button>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+ </div>
+ <div  *ngIf="octavio==1">
+ <ion-grid padding>
+    <ion-row>
+    <ion-col text-center>
+        <img src="assets/imgs/Taqui.png" class="img-center">
+        <h6 >Enviamos um código por SMS <br> para: +244 {{PhoneNumber}}</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center >
+         <ion-item class="item"> 
+              <ion-label class="icon"><img src="assets/imgs/angola.ico"></ion-label>
+              <ion-input placeholder="Insira aqui o código" [(ngModel)]="code"></ion-input>
+         </ion-item>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+      <button ion-button color="taqui" round (click)="Resendcode()">CONFIRMAR</button>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col text-center>
+          <p> <a>Não recebí o código, reenvie</a></p>
+          </ion-col>
+          </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="octavio==2">
+    <ion-grid padding>
+       <ion-row>
+       <ion-col text-center>
+           <img src="assets/imgs/Taqui.png" class="img-center">
+           <h6 >Só mais um passo para terminar</h6>
+         </ion-col>
+       </ion-row>
+       <ion-row>
+         <ion-col text-center >
+            <ion-item class="item"> 
+                 <ion-input placeholder="Nome Completo" [(ngModel)]="displayName"></ion-input>
+            </ion-item>
+       </ion-col>
+       </ion-row>
+       <ion-row>
+        <ion-col text-center >
+           <ion-item class="item"> 
+                <ion-input placeholder="Nova senha" [(ngModel)]="Senha"></ion-input>
+           </ion-item>
+      </ion-col>
+      </ion-row>
+       <ion-row>
+         <ion-col text-center>
+         <button ion-button color="taqui" round (click)="UserPassWord()">TERMINAR</button>
+         </ion-col>
+         </ion-row>
+         <ion-row>
+             <ion-col text-center>
+             <p> Ao clicar em "TERMINAR", você concorda com <br> os nossos <a>termos e condições</a>.</p>
+             </ion-col>
+             </ion-row>
+       </ion-grid>
+     </div>
+     <div id="recaptcha-container"></div>
+    <p id="swallow">swallow, All rights reserved 2017 (c)</p>
+    
+    </ion-content>
+    

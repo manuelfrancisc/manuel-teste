@@ -1,0 +1,17 @@
+page-favorite {
+    #avatar{
+        width:48px;
+        height: 48px;
+        border-radius: 100%;
+        position: absolute;
+        top:8px;
+        right:10px;
+        box-shadow: none
+   }
+  #input{
+        border-radius: 100px;
+        border: 1px solid  silver;
+        width: 80%;
+        margin-left:10%; 
+  }
+}
