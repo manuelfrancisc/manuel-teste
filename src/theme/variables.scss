@@ -44,10 +44,10 @@ $colors: (
 gray: rgba(136, 136, 136, 0.671)
 );
 
-$text-input-md-highlight-color:color($colors,taqui);
-$tabs-ios-tab-color-active: color($colors,taqui);
-$tabs-md-tab-color-active:color($colors,taqui);
-$select-md-icon-color:color($colors,light);
+$text-input-md-highlight-color:color($colors,light);//linha do input
+$tabs-ios-tab-color-active: color($colors,taqui);//cor dos icones ios
+$tabs-md-tab-color-active:color($colors,taqui);//cor dos icones android tab
+$select-md-icon-color:rgb(238, 99, 123); ;//selet button icone
 $select-ios-icon-color:color($colors,light);
 $list-md-border-color:white;
 // App iOS Variables

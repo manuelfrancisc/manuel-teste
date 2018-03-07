@@ -1,3 +1,4 @@
+import { AboutPage } from './..//about/about';
 import { MoviesProvider } from './../../providers/movies/movies';
 import { ProfilePage } from './../profile/profile';
 import { Component, OnInit } from '@angular/core';
@@ -6,6 +7,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Rx';
 import { Http} from '@angular/http';
+
 
 @Component({
   selector: 'page-home',
@@ -16,22 +18,19 @@ import { Http} from '@angular/http';
 })
 export class HomePage  implements OnInit {
   
-  searchterm: string;
- 
+  searchterm: string; 
   startAt = new Subject();
   endAt = new Subject();
- 
   clubs;
   allclubs;
- 
   startobs = this.startAt.asObservable();
   endobs = this.endAt.asObservable();
  
   data:String;
-  constructor(public navCtrl: NavController,private afs: AngularFirestore, public http : Http) {
-             
-       }
-    //Icone Link
+  data2:String;
+  constructor(public navCtrl: NavController,private afs: AngularFirestore, public http : Http){}
+    
+  //Icone Link
    ProfilePage(){
        this.navCtrl.push(ProfilePage);
    }
@@ -45,17 +44,19 @@ export class HomePage  implements OnInit {
         this.clubs = clubs;
       })
     })
-    this.manuel();
-  }
 
-    manuel(){
-             this.http.get("https://api.themoviedb.org/3/movie/popular?api_key=47bb1e079e91f4e1fe77c1494051f43b")
-               .map(res=> res.json())
-              .subscribe(data=>{ this.data = data.results; console.log(data.results)})
-              ,error=>{console.log(error)}
-       
-    }
-  
+    this.ml();
+  }
+ 
+
+  //Json
+    ml(){
+      this.http.get("http://fc66e15e.ngrok.io/wp-json/wp/v2/posts/")
+        .map(res=> res.json())
+       .subscribe(data=>{ this.data2 = data; console.log(data)})
+       ,error=>{console.log(error)}
+
+}
 
   search($event) {
     let q = $event.target.value;
@@ -76,4 +77,12 @@ export class HomePage  implements OnInit {
     return this.afs.collection('epl', ref => ref.orderBy('club')).valueChanges();
   }
   
+
+  //Navigating-Routes  (Pages)
+  HotelPage(){this.navCtrl.push(AboutPage,{manuel :"Hotel"});}
+  ActivityPage(){this.navCtrl.push(AboutPage,{manuel :"Actividade"});}
+  NaturePage(){this.navCtrl.push(AboutPage,{manuel :"Natureza"});}
+  BeachPage(){this.navCtrl.push(AboutPage,{manuel :"Praia"});}
+  RestaurantePage(){this.navCtrl.push(AboutPage,{manuel :"Restaurante"});}
+
 }

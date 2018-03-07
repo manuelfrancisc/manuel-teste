@@ -1,16 +1,16 @@
 <ion-header >
   <ion-item  id="input">
       <ion-label id="icon"><ion-icon name="search"></ion-icon></ion-label>
-    <ion-input placeholder="Ex: Hotel Tivoli" > </ion-input>
+    <ion-input placeholder="Ex: Hotel Tivoli" type="text" [(ngModel)]="searchterm" (keydown)="search($event)"> </ion-input>
   </ion-item>
   <ion-select [(ngModel)]="eventos" id="btn" cancelText="Cancelar" okText="OK" interface="action-sheet" >
-      <ion-option value="nes" selected>Hoteis</ion-option>
+      <ion-option value="nes" selected>{{teste}}</ion-option>
       <ion-option value="n64"> natureza</ion-option>
       <ion-option value="ps">manuel</ion-option>
     </ion-select>
 
 
-    <ion-row  > 
+    <ion-row> 
         <ion-col id="row"> <button ion-button outline color="taqui" style="font-size:12px;"> Em Luanda </button> </ion-col>
         <ion-col id="row"> <button ion-button outline color="gray" style="font-size:12px;"> Perto de mim</button> </ion-col>
         <ion-col id="row"> <button ion-button outline color="gray" style="font-size:12px;">Mais filtro </button> </ion-col>
@@ -18,9 +18,28 @@
   </ion-header>
 
 <ion-content padding>
-
-<div *ngFor="let manu of manuel | async">
-         <p>{{manu.city}}</p>
+    <div *ngIf="searchterm">
+    <div *ngFor="let club of clubs">
+        <ion-item>
+           <ion-avatar item-start> <img src="{{club.image}}"> </ion-avatar>
+          <h3>{{club.club | uppercase}}</h3>
+          <h3> {{club.name | uppercase}} </h3>
+          <h3  style="color:rgb(235, 98, 121)"><ion-icon name="ios-star"></ion-icon> <ion-icon name="ios-star"></ion-icon> <ion-icon name="ios-star"> </ion-icon> <ion-icon name="ios-star"></ion-icon>  <ion-icon name="ios-star-outline"></ion-icon> </h3>  
+          <h3>{{club.city}}</h3>  
+          <h3>{{club.country}}</h3>   
+        </ion-item>
+        <hr>
+      </div>
 </div>
 
+<div *ngIf="!searchterm">
+<div *ngFor="let manu of manuel | async">
+  <ion-item>
+  <ion-avatar item-start><img  src="https://firebasestorage.googleapis.com/v0/b/taquiclient.appspot.com/o/25398685_1466687843447834_8763177209878655648_n.jpg?alt=media&token=040e9581-ea10-4d3d-99bc-aa87389d1d2c"> </ion-avatar> 
+       <p>{{manu.name}}</p>  
+       <p>{{manu.id}}</p>   
+ </ion-item> 
+ <hr> 
+</div>
+</div>
 </ion-content>

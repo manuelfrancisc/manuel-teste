@@ -1,3 +1,4 @@
+import { NaturePage } from './../pages/nature/nature';
 
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,6 +28,11 @@ import { SlidePage } from '../pages/slide/slide';
 import { PhoneAuthPage } from '../pages/phone-auth/phone-auth';
 import { CompanyPage } from '../pages/company/company';
 import { MoviesProvider } from '../providers/movies/movies';
+import { HotelPage } from '../pages/hotel/hotel';
+import { BeachPage } from '../pages/beach/beach';
+import { RestaurantePage } from '../pages/restaurante/restaurante';
+import { ActivityPage } from '../pages/activity/activity';
+import { environment } from '../pages/enviroment';
 
 
 export const config = {
@@ -53,7 +59,12 @@ export const config = {
     ChatPage,
     FavoritePage,
     ProfilePage,
-    CompanyPage
+    CompanyPage,
+    HotelPage,
+    NaturePage,
+    BeachPage,
+    RestaurantePage,
+    ActivityPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +73,8 @@ export const config = {
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
-    HttpModule
+    HttpModule,
+   
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -78,7 +90,12 @@ export const config = {
     ChatPage,
     FavoritePage,
     ProfilePage,
-    CompanyPage
+    CompanyPage,
+    HotelPage,
+    NaturePage,
+    BeachPage,
+    RestaurantePage,
+    ActivityPage
 
   ],
   providers: [

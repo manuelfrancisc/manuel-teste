@@ -25,18 +25,22 @@ page-home {
         margin:0px 10px 5px 10px; 
         border-radius:6px;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0);
+        
     }}
 
-     b{ font-size:17px; 
+     b{ font-size:13px; 
         margin-left:10px;}
      .row-pad{
-         .ion-col{margin:5px 10px 10px 10px; 
-         width:210px;
+        width:33%;
+         .ion-col {margin:0px 10px 10px 0px; 
+        
          
          /*border:1px solid gray;*/}}
 
     .img-Artigos{
-        height: 120px;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0);
+        overflow-x: hidden;
+       
+      
+ 
     }
 }
