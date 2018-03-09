@@ -1,12 +1,13 @@
-import { HotelPage } from './../pages/hotel/hotel';
-import { NaturePage } from './../pages/nature/nature';
+//import { HotelPage } from './../pages/hotel/hotel';
+//import { NaturePage } from './../pages/nature/nature';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { TabsPage } from '../pages/tabs/tabs';
-import { SlidePage } from '../pages/slide/slide';
+//import { TabsPage } from '../pages/tabs/tabs';
+//import { SlidePage } from '../pages/slide/slide';
+import { ProfilePage } from '../pages/profile/profile';
 //import firebase from 'firebase';
 
 
@@ -14,7 +15,7 @@ import { SlidePage } from '../pages/slide/slide';
   templateUrl: 'app.html'
 })
 export class MyApp {
-rootPage=HotelPage ; 
+rootPage= ProfilePage; 
  
 
 user;
